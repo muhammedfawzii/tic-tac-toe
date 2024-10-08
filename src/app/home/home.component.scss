@@ -59,3 +59,19 @@
     right: -50px;
     z-index: -1;
 }
+@media (max-width:576px) {
+    .col-md-4{
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        width: 33.33% !important;
+        max-height: 170px !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
+@media (max-width:576px) {
+    .game-board{
+        width: 90% !important;
+        
+    }
+}

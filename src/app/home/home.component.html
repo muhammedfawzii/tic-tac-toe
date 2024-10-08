@@ -1,8 +1,8 @@
-<h2>Player Turn: {{playerTurn}}</h2>
+<h2 class="bg-black text-white m-0">Player Turn: {{playerTurn}}</h2>
 <div class="game-container">
     <div class="animate__animated animate__backInLeft row g-0 game-board">
       @for (square of board; track $index) {
-        <div class="col-md-4">
+        <div class="col-sm-4 col-md-4 d-flex">
             <div (click)="player($index)" class="fw-bold square d-flex align-items-center justify-content-center fs-2">{{square}}</div>                  
         </div>
       }

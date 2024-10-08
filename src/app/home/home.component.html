@@ -1,0 +1,19 @@
+<h2>Player Turn: {{playerTurn}}</h2>
+<div class="game-container">
+    <div class="animate__animated animate__backInLeft row g-0 game-board">
+      @for (square of board; track $index) {
+        <div class="col-md-4">
+            <div (click)="player($index)" class="fw-bold square d-flex align-items-center justify-content-center fs-2">{{square}}</div>                  
+        </div>
+      }
+    </div>
+    <div class="circle"></div>
+    <div class="circle1"></div>
+    @for (combin of winner; track $index) {
+        @if (board[combin[0]] && board[combin[0]] === board[combin[1]] && board[combin[1]] === board[combin[2]]) {
+                <h2 class="bg-black text-center w-75 text-white">{{board[combin[0]]}} wins!</h2>
+        }
+    }
+    <button class="btn btn-outline-warning text-white fs-4 d-block w-50" (click)="resetGame()"> reset</button>
+</div>
+
